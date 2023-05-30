@@ -1,0 +1,13 @@
+#abo,#gas{
+    border:solid;
+    border-radius: 10%;
+}
+
+#abo:hover {
+    background-color: aquamarine;
+    cursor:pointer;
+}
+#gas:hover {
+    background-color: blueviolet;
+    cursor:pointer;
+}
