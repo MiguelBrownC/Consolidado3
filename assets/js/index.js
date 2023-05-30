@@ -44,8 +44,8 @@ let balance = document.getElementById("presupuesto")
 inputPresupuesto.addEventListener('keyup', function () {
 	let a = parseFloat( document.getElementById("clpabono"))
 	let g = parseFloat( 	document.getElementById("clpgastos"))
-	let total
-	total = a - b
-	console.log(inputPresupuesto.value)
-	document.getElementById("balance").innerHTML = `CLP: ${presupuesto}`
+	let total = 0
+	total = a - g
+	console.log(total)
+	document.getElementById("balance").innerHTML = `CLP: ${total}`
 })
