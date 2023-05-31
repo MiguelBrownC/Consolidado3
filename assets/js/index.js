@@ -1,4 +1,4 @@
-const gastos = []
+let gastos = []
 
 let total = 0
 let inputPresupuesto = document.getElementById("presupuesto")
@@ -17,7 +17,8 @@ function agregar() {
 }
 
 function eliminarGasto(id){
-console.log(id)
+	gastos = gastos.filter(item => item.id !== id)
+	imprimirGastos()
 }
 
 function imprimirGastos(){
@@ -29,7 +30,7 @@ function imprimirGastos(){
 		<td>${gasto.id}</td>
 		<td>${gasto.nombre}</td>
 		<td>${gasto.monto}</td>
-		<td><button class="btn btn-danger" onclick="eliminarGastos(${gasto.id})">Borrar</button></td>
+		<td><button class="btn btn-danger" onclick="eliminarGasto(${gasto.id})">Borrar</button></td>
 	  </tr>
 		`	
 	})
