@@ -16,15 +16,15 @@ function agregar() {
 	action()
 }
 
-function eliminarGasto(id){
+function eliminarGasto(id) {
 	gastos = gastos.filter(item => item.id !== id)
 	imprimirGastos()
 }
 
-function imprimirGastos(){
+function imprimirGastos() {
 	let divGastos = document.getElementById("gastosTable")
-	let html= ''
-	gastos.forEach(gasto =>{
+	let html = ''
+	gastos.forEach(gasto => {
 		html += `
 		<tr>
 		<td>${gasto.id}</td>
@@ -32,11 +32,11 @@ function imprimirGastos(){
 		<td>${gasto.monto}</td>
 		<td><button class="btn btn-danger" onclick="eliminarGasto(${gasto.id})">Borrar</button></td>
 	  </tr>
-		`	
+		`
 	})
 	divGastos.innerHTML = html
 	action()
-}	
+}
 
 function gasto() {
 	let nombre = document.getElementById("nombreGasto").value
@@ -53,7 +53,7 @@ function gasto() {
 // }
 
 function action() {
-	let totalGastos = gastos.reduce((acumulador, valorActual) => acumulador +  parseFloat(valorActual.monto),0)
+	let totalGastos = gastos.reduce((acumulador, valorActual) => acumulador + parseFloat(valorActual.monto), 0)
 	document.getElementById("clpgastos").innerHTML = totalGastos
 	console.log(totalGastos)
 	let aa = 0.0
