@@ -1,0 +1,1 @@
+App Web para manejo de un presupuesto personal, con la logica creada en el JS y usando boostrap para estilizar el sitio
