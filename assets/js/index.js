@@ -45,12 +45,6 @@ function gasto() {
 	imprimirGastos()
 }
 
-// function gasto(){
-// 	valormenos = inputPresupuesto.value
-// 	prueba2=valormenos.replace(/\D/g, "")
-// 	document.getElementById("clpgastos").innerHTML = prueba2
-// 	action()
-// }
 
 function action() {
 	let totalGastos = gastos.reduce((acumulador, valorActual) => acumulador + parseFloat(valorActual.monto), 0)
@@ -66,22 +60,3 @@ function action() {
 	console.log(total)
 	document.getElementById("balance").innerHTML = total
 }
-
-// let balance = document.getElementById("presupuesto")
-// inputPresupuesto.addEventListener('keyup', function () {
-// 	let a = parseFloat( document.getElementById("clpabono"))
-// 	let g = parseFloat( 	document.getElementById("clpgastos"))
-// 	let total = 0
-// 	total = a - g
-// let balance = document.getElementById("presupuesto")
-// inputPresupuesto.addEventListener('keyup', function () {
-// 	let a = parseFloat( document.getElementById("clpabono"))
-// 	let g = parseFloat( 	document.getElementById("clpgastos"))
-// 	let total = 0
-// 	total = a - g
-// 	console.log(total)
-// 	document.getElementById("balance").innerHTML = `CLP: ${total}`
-// })
-// 	console.log(total)
-// 	document.getElementById("balance").innerHTML = `CLP: ${total}`
-// })
